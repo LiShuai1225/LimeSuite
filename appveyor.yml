@@ -1,8 +1,7 @@
 version: '{build}'
 branches:
   only:
-  - stable
-  - master
+  - ci_test
 image: Visual Studio 2015
 clone_folder: c:\projects\limesuite
 environment:

@@ -30,8 +30,7 @@ env:
 # whitelist
 branches:
   only:
-    - master
-    - stable
+    - ci_test
 
 before_install:
   
@@ -60,6 +59,7 @@ install:
   - popd
 
 script:
+  - cmake --version
   - mkdir temp && cd temp
   - cmake ../ -DCMAKE_INSTALL_PREFIX=${INSTALL_PREFIX} -DCMAKE_BUILD_TYPE=${BUILD_TYPE}
   - make -j2
